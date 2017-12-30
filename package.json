@@ -1,0 +1,19 @@
+{
+  "name": "recast.ly",
+  "version": "1.1.0",
+  "description": "Making YouTube with React and ES6",
+  "author": "Vanilla Coding <info@vanillacoding.co>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "jquery": "^2.2.1",
+    "lodash": "^4.6.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-scripts": "^1.0.17"
+  }
+}
