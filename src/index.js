@@ -4,6 +4,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App.jsx';
 import './styles.css';
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
 
 // TODO: Render the `App` component to the DOM
