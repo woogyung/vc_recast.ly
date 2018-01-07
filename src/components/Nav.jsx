@@ -7,7 +7,7 @@ export default class Nav extends React.Component {
 			<nav className="navbar">
 			    <div className="col-md-6 col-md-offset-3">
 			      <Search 
-			      	 onClickSearchButton={ this.props.onClickSearchButton }
+			      	 onClickSearchButton={this.props.onClickSearchButton}
 			      />
 			    </div>
 			</nav>
