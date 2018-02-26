@@ -117,9 +117,7 @@ React에서 형제(sibling) component는 서로 직접 액세스 할 수 없으�
   - [ ] 동영상 목록의 모든 동영상과 플레이어의 현재 동영상을 추적하기 위해 `App`의 `state`를 초기화 하세요. 이 `state`를 자식 componet의 `props`로 전달하세요. 예제 데이터를 계속 사용하십시오.
 
   - [ ] 'VideoListEntry'의 제목을 클릭하면 해당 비디오가 플레이어에 표시되도록하십시오.
-  functional component는 `state`를 사용하면 않됩니다.
-
-  - [ ] `App`에 대한 모든 테스트가 통과하는지 확인하십시오. `npm test`로 테스트를 열 수 있습니다.
+  functional component는 `state`를 사용하면 안됩니다.
 
 ### YouTube API와의 interaction set up 하기.
 
