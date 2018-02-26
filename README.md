@@ -18,7 +18,7 @@ Bare Minimum Requirements를 완료하면 YouTube의 모든 동영상을 실시�
 
 ## Component 기준으로 생각하기
 
-React로 구축 된 front-end app은 React component (일반적으로 그냥 component라고 함)로만 구성됩니다. 
+React로 구축 된 front-end app은 React component (일반적으로 그냥 component라고 함)로만 구성됩니다.
 component에는 다른 component가 nesting 될수 있지만 각 component는 한가지 일만 수행해야 합니다.
 한가지 일만 수행하는 것은 function, object, 심지어는 program 자체를 만들때 best practice로 여겨 지는 것이며 React가 이것을 모방 한 것입니다.
 어떤 component를 만들지 구성하는 방법을 결정하는 것은 다소 임의적입니다.
@@ -26,14 +26,14 @@ component에는 다른 component가 nesting 될수 있지만 각 component는 �
 
 작동은 하지만 app에 필요한 필수 비 상호 작용 버전의 commponent가 이미 구축되었습니다.
 각 component는 `src/components/` folder 내부의 파일들에 있습니다.
-이 sprint가 진행되는 동안 component가 서로 다른 component끼리 interact하는것은 물론 YouTube Data API와 interact하도록 refactor할 것입니다. 
+이 sprint가 진행되는 동안 component가 서로 다른 component끼리 interact하는것은 물론 YouTube Data API와 interact하도록 refactor할 것입니다.
 다음은 component들이 어떻게 정리 되었는지에 대한 설명 입니다.
 
   * `App` - 전체 app의 최상위 컨테이너입니다. 이것은 DOM에 rendering될 component입니다.
 
   * `Nav` - 상단 네비게이션 바를 위한 컨테이너 component
 
-  * `Search` - 검색 input 필드에 대한 정보를 알고 전달합니다. 
+  * `Search` - 검색 input 필드에 대한 정보를 알고 전달합니다.
 
   * `VideoPlayer` - 한개 비디오 재생 및 정보 표시.
 
@@ -64,7 +64,7 @@ npm은 Node 생태계에서 시작되었지만 모든 유형의 JavaScript 코�
 
   - [ ] `src/index.js` 내부에서 `App` component를 DOM으로 rendering하고 code base를 탐색하여 각 component가 하는 일을 이해하세요.
 
-  - [ ] component를 생각하는 방법에 대해 자세히 알아 보려면 [이 안내서](https://facebook.github.io/react/docs/thinking-in-react.html)를 읽으십시오. 
+  - [ ] component를 생각하는 방법에 대해 자세히 알아 보려면 [이 안내서](https://facebook.github.io/react/docs/thinking-in-react.html)를 읽으십시오.
   이 가이드는 이전의 `React.createClass` 구문을 사용하여 class component를 생성합니다.
   React app을 구성하는 철학이나 syntax를 이해하려고 하지마세요.
 
@@ -96,10 +96,7 @@ front-end app을 만들 때 실제 데이터로 작업하는 복잡성을 일시
 
   - [ ] `VideoListEntry` component를 refactoring하여 수신하는 비디오 object에 따라 동적으로 rendering되게 하세요.
 
-  - [ ] `VideoList`와 `VideoListEntry` test가 pass하는지 확인하세요. 
-  `npm test`로 test를 열 수 있습니다.
-
-모든 설정이 끝나면 페이지에서 제목, 미리보기 이미지 및 일부 React Tutorials의 설명을 볼 수 있습니다. 
+모든 설정이 끝나면 페이지에서 제목, 미리보기 이미지 및 일부 React Tutorials의 설명을 볼 수 있습니다.
 "unique `key` prop'에 대한 콘솔에서 *경고*를 발견하면 [React's performance](https://facebook.github.io/react/docs/multiple-components.html#dynamic-children)와 관련이 있음을 알 수 있습니다. 무시하셔도 되는 경고 입니다.
 
 ### Create a dynamic Video Player component
@@ -108,8 +105,6 @@ front-end app을 만들 때 실제 데이터로 작업하는 복잡성을 일시
   - [ ] `exampleVideoData`에서 하나의 비디오를 `VideoPlayer`로 넘깁니다.
 
   - [ ] 전달 된 비디오를 재생하고 제목과 설명을 표시하려면 `VideoPlayer`를 업데이트하세요.
-
-  - [ ] `VideoPlayer`테스트가 통과하는지 확인하십시오. `npm test`로 테스트를 열 수 있습니다.
 
 ### Video List 와 Video Player component들을 연결하세요.
 
@@ -121,7 +116,7 @@ React에서 형제(sibling) component는 서로 직접 액세스 할 수 없으�
 
   - [ ] 동영상 목록의 모든 동영상과 플레이어의 현재 동영상을 추적하기 위해 `App`의 `state`를 초기화 하세요. 이 `state`를 자식 componet의 `props`로 전달하세요. 예제 데이터를 계속 사용하십시오.
 
-  - [ ] 'VideoListEntry'의 제목을 클릭하면 해당 비디오가 플레이어에 표시되도록하십시오. 
+  - [ ] 'VideoListEntry'의 제목을 클릭하면 해당 비디오가 플레이어에 표시되도록하십시오.
   functional component는 `state`를 사용하면 않됩니다.
 
   - [ ] `App`에 대한 모든 테스트가 통과하는지 확인하십시오. `npm test`로 테스트를 열 수 있습니다.
@@ -144,7 +139,7 @@ YouTube 데이터 API에서 동영상에 액세스하려면 개발자 키가 필
 
 ### Create a reusable API helper
 
-YouTube 동영상을 검색하려면 API의 [Search:list](https://developers.google.com/youtube/v3/docs/search/list) endpoint를 사용해야 합니다. 
+YouTube 동영상을 검색하려면 API의 [Search:list](https://developers.google.com/youtube/v3/docs/search/list) endpoint를 사용해야 합니다.
 코드를 체계적으로 유지하려면이 endpoint와 interaction을 책임질 helper function을 작성하세요. `lib/searchYouTube.js`에서 `searchYouTube` function을 작성하세요. 아래의 목록을 해야 합니다:
 
   - [ ] jQuery를 사용하여 search endpoint에 'GET' 요청을 보냅니다. **이 sprint에서 jQuery를 사용해야하는 유일한 시간입니다**
@@ -161,23 +156,17 @@ YouTube 동영상을 검색하려면 API의 [Search:list](https://developers.goo
 
   - [ ] embeddable video들만 `GET` 하세요.
 
-  - [ ] `searchYouTube`에 대한 모든 test가 pass하는지 확인하십시오. `npm test`로 테스트를 열 수 있습니다.
-
-
 ### 실시간 data로 app을 시작(initialize)하세요.
-실시간 데이터를 통합하기 전에 `exampleVideoData'에 얼마나 많은 작업을 했는지 알아 보기는 시간을 내야합니다. 
-이제 실제 데이터를 사용으로 생기는 복잡성을 해결할 수 있습니다. 
-실제 데이터의 모양이 가짜 데이터와 같다고 가정하면 모든 작업은 수월이 계속됩니다. 
+실시간 데이터를 통합하기 전에 `exampleVideoData'에 얼마나 많은 작업을 했는지 알아 보기는 시간을 내야합니다.
+이제 실제 데이터를 사용으로 생기는 복잡성을 해결할 수 있습니다.
+실제 데이터의 모양이 가짜 데이터와 같다고 가정하면 모든 작업은 수월이 계속됩니다.
 helper function을 올바르게 작성했다면이 이 섹션은 간단하게 끝낼수 있습니다.
 
   - [ ] 다른 module들로 해본 것처럼 `searchYouTube`를 사용 할 수있게 만들고 여러분의 app의 `prop`으로 전달하십시오.
 
   - [ ] `App`의 초기 `state`의 `exampleVideoData`를 빈 초기 값들로 대체하십시오. data type별로 알맞는 빈 초기값을 주세요.
 
-  - [ ] `searchYouTube`에서 return 된 실시간 동영상으로 app을 rendering하려면 [`componentDidMount`](https://facebook.github.io/react/docs/component-specs.html#mounting-componentdidmount) 라이프 사이클 후크(life cycle hook)를 활용하세요. 
-
-  - [ ] `AppSpec.jsx`의 보류중인(pending) test에서 `x`를 제거하고 모든 `App` test가 pass하는지 확인하십시오. `npm test`로 테스트를 열 수 있습니다.
-
+  - [ ] `searchYouTube`에서 return 된 실시간 동영상으로 app을 rendering하려면 [`componentDidMount`](https://facebook.github.io/react/docs/component-specs.html#mounting-componentdidmount) 라이프 사이클 후크(life cycle hook)를 활용하세요.
 
 ### live-search 구현하기
 `Search`를 만들고 다른 component를 업데이트하세요.
@@ -185,8 +174,6 @@ helper function을 올바르게 작성했다면이 이 섹션은 간단하게 �
   - [ ] 사용자가 input에 입력하면 `VideoList`및 `VideoPlayer` component가 입력 값과 일치하는 YouTube 데이터 API의 동영상으로 업데이트되게 하세요.
 
   - [ ] `Search` component에 의해 trigger된 AJAX request를 Debounce하여 최대 *500ms마다 한번*만 trigger되게 하세요. (유튜브의 API가 무료가 아니라고 상상해 보세요 :O)
-
-  - [ ] Make sure all the tests for `Search` are passing. You can open the tests with `npm test`
 
 ## Advanced Content
 저희 Advanced Content는 여러분이 하기에 벅찬 과제를 도움이나 서포트없이 해결해야 하는 부분입니다. 현업에서 중금 또는 상급 개발자가 혼자서 해결하는것과 같이요.
